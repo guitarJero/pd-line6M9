@@ -1,64 +1,41 @@
-#N canvas 618 148 691 474 10;
-#X obj 208 65 hradio 15 1 0 10 empty keyNumber empty 0 -8 0 10 -262144
--1 -1 0;
-#X obj 208 85 pgmout 8;
-#X obj 365 64 key;
-#X obj 365 84 moses 49;
-#X obj 410 104 moses 58;
-#X obj 410 124 - 48;
-#X obj 365 104 sel 48;
-#X msg 365 124 0;
-#X obj 365 157 s keyNumber;
+#N canvas 618 148 591 314 10;
 #X obj 36 95 bng 24 250 50 0 \$0-loopRecord empty REC 4 12 0 10 -1
 -260097 -4034;
 #X obj 86 95 bng 24 250 50 0 \$0-loopOnce empty 1x 7 12 0 10 -1 -260097
 -4034;
-#X obj 36 70 bng 24 250 50 0 \$0-loopUndo empty <- 7 12 0 10 -1 -260097
+#X obj 36 70 bng 24 250 50 0 \$0-loopUndo empty UNDO 1 12 0 10 -1 -260097
 -4034;
 #X obj 61 95 tgl 24 0 \$0-loopPlayStop \$0-loopPlayStopIn P/S 4 12
 0 10 -1 -260097 -4034 0 127;
-#X obj 25 224 r \$0-loopRecord;
-#X obj 125 224 r \$0-loopPlayStop;
-#X obj 235 224 r \$0-loopOnce;
-#X obj 325 224 r \$0-loopUndo;
-#X obj 415 224 r \$0-loopHalf;
-#X obj 506 224 r \$0-loopReverse;
-#X obj 25 268 ctlout 50 8;
-#X obj 125 268 ctlout 28 8;
-#X msg 235 246 127;
-#X obj 235 268 ctlout 80 8;
-#X msg 325 246 127;
-#X obj 325 268 ctlout 82 8;
-#X obj 415 268 ctlout 36 8;
-#X obj 506 268 ctlout 85 8;
+#X obj 230 104 r \$0-loopRecord;
+#X obj 329 104 r \$0-loopPlayStop;
+#X obj 439 104 r \$0-loopOnce;
+#X obj 231 60 r \$0-loopUndo;
+#X obj 330 60 r \$0-loopHalf;
+#X obj 439 60 r \$0-loopReverse;
+#X obj 335 202 ctlout 50 8;
 #X obj 86 70 tgl 24 0 \$0-loopReverse empty REV 4 12 0 10 -1 -260097
 -4034 0 127;
-#X obj 61 70 tgl 24 0 \$0-loopHalf \$0-loopHalfIn HALF 4 12 0 10 -1
+#X obj 61 70 tgl 24 0 \$0-loopHalf \$0-loopHalfIn 1/2 4 12 0 10 -1
 -260097 -4034 0 127;
-#X msg 25 246 127;
-#X obj 299 306 ctlin;
-#X obj 299 339 pack \$1 \$2 \$3;
-#X obj 299 366 print;
-#X obj 40 357 ctlin 28;
-#X obj 40 391 s \$0-loopPlayStopIn;
-#X connect 0 0 1 0;
-#X connect 2 0 3 0;
-#X connect 3 0 6 0;
-#X connect 3 1 4 0;
-#X connect 4 0 5 0;
-#X connect 5 0 8 0;
-#X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 13 0 29 0;
-#X connect 14 0 20 0;
-#X connect 15 0 21 0;
-#X connect 16 0 23 0;
-#X connect 17 0 25 0;
-#X connect 18 0 26 0;
-#X connect 21 0 22 0;
-#X connect 23 0 24 0;
-#X connect 29 0 19 0;
-#X connect 30 0 31 0;
-#X connect 30 1 31 1;
-#X connect 31 0 32 0;
-#X connect 33 0 34 0;
+#X floatatom 111 140 5 0 16 0 MIDI_Channel - m9MidiChannel;
+#X obj 398 175 r m9MidiChannel;
+#X msg 230 126 127 50;
+#X msg 439 126 127 80;
+#X msg 231 82 127 82;
+#X msg 330 82 \$1 36;
+#X msg 329 126 \$1 28;
+#X msg 439 82 \$1 85;
+#X connect 4 0 15 0;
+#X connect 5 0 19 0;
+#X connect 6 0 16 0;
+#X connect 7 0 17 0;
+#X connect 8 0 18 0;
+#X connect 9 0 20 0;
+#X connect 14 0 10 2;
+#X connect 15 0 10 0;
+#X connect 16 0 10 0;
+#X connect 17 0 10 0;
+#X connect 18 0 10 0;
+#X connect 19 0 10 0;
+#X connect 20 0 10 0;
