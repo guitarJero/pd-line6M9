@@ -1,0 +1,10 @@
+#N canvas 904 424 450 300 10;
+#X obj 100 100 bng 24 250 50 0 empty \$0-m9TapBang TAP 2 12 0 12 -86853
+-204786 -204800;
+#X obj 100 132 outlet bang;
+#X text 130 99 When m9 pedal is connected via midi;
+#X text 130 109 The tap pedal will bang this control;
+#X obj 100 69 ctlin 64 8;
+#X connect 0 0 1 0;
+#X connect 4 0 0 0;
+#X coords 0 -1 1 1 24 24 2 100 100;
